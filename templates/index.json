@@ -17,7 +17,7 @@
         "top_text": "<p>Find the ideal gift for your loved ones.</p>",
         "top_button_text": "Choose gift",
         "top_button_link": "#",
-        "top_button_icon": "<svg width=\"64\" height=\"26\" viewbox=\"0 0 64 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1.76563 11.2357L9.72209e-05 11.2357L9.68518e-05 14.7667L1.76562 14.7667L1.76563 11.2357ZM63.0591 14.2496C63.7485 14.9388 63.7485 16.0566 63.0591 16.7461L51.8233 27.9818C51.1338 28.6713 50.016 28.6713 49.3265 27.9818C48.637 27.2923 48.637 26.1745 49.3265 25.485L59.3138 15.4977L49.3265 5.51036C48.637 4.82088 48.637 3.70306 49.3265 3.01358C50.016 2.3241 51.1338 2.3241 51.8233 3.01358L63.0591 14.2496ZM1.76562 17.7667L61.8106 17.7668L61.8106 14.2357L1.76562 14.2357L1.76562 17.7667Z\" fill=\"currentcolor\"></path>\n</svg>",
+        "top_button_icon": "",
         "heading": "The Gift Guide",
         "description": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p>",
         "button_text": "Shop Now",
