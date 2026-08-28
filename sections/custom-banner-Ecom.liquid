@@ -1,0 +1,576 @@
+
+<style>
+      .custom-banner-section .page-width {
+        max-width: 100%;
+        background: #f5f5f5;
+        padding:0
+    }
+    .cstm_banner_top_inner {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .custom-banner__top-text p {
+        color: #000;
+        text-align: center;
+        margin: 0;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .custom-banner__logo a {
+        display: flex;
+    }
+
+    img.custom-banner__logo-image {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .custom-banner__top-button a {
+        display: flex;
+        position: relative;
+        color: black;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        background: #FFF544;
+        min-height: 60px;
+        line-height: 1;
+        padding: 10px 45px;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        gap: 15px;
+    }
+.cstm_hamburger {
+    display: none;
+}
+
+.cstm_mobile_cont {
+    display: none;
+}
+    span.custom-banner__button-icon {
+        display: flex;
+        max-width: 30px;
+    }
+
+    .custom-banner__top-button {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    .custom-banner__top {
+        max-width: 1600px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    .custom-banner__top-button a:before {
+           content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: #000000;
+        z-index: 1;
+        transform: translateX(-101%);
+        transition: transform 350ms ease;
+
+    }
+
+    .custom-banner__top-button a:hover {
+        color: white;
+    }
+
+    a.custom-banner__button span {
+        z-index: 5;
+        position: relative;
+        transition: color 350ms ease;
+    }
+
+    .custom-banner__top-button a:hover:before {
+        transform: translateX(0);
+    }
+
+
+  .bann_content {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1600px;
+      height: 100%;
+      padding: 20px 15px;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+  };
+
+  .custom-banner__content {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1600px;
+      height: 100%;
+      padding: 20px 15px;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+  }
+
+  .custom-banner__content {
+      max-width: 500px;
+      padding-bottom: 50px;
+  }
+
+  .cstm_banner_btm {
+    max-width: 1600px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cstm_banner_btm p {
+    margin: 0;
+    font-size: 20px;
+    color: #000;
+}
+  h2.custom-banner__heading {
+      font-size: 70px;
+      margin-top: 0;
+      margin-bottom: 30px;
+  }
+
+  .custom-banner__description p {
+      font-size: 20px;
+      color: #000;
+      line-height: 1.4;
+  }
+
+  a.custom-banner__button.custom-banner__button--content {
+      background: #000;
+      width: 100%;
+      min-height: 70px;
+      position: relative;
+      display: flex;
+      max-width: fit-content;
+      overflow: hidden;
+      color: white;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      text-transform: uppercase;
+      font-size: 20px;
+      padding: 10px 35px 10px 65px;
+  }
+
+  a.custom-banner__button.custom-banner__button--content:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: #FFF544;
+      z-index: 1;
+      transform: translateX(-101%);
+      transition: transform 350ms ease;
+  }
+
+  a.custom-banner__button.custom-banner__button--content:hover {
+      color: #000;
+  }
+
+  a.custom-banner__button.custom-banner__button--content:hover:before {
+      transform: translateX(0);
+  }
+
+
+
+        #CustomBanner-{{ section.id }} .custom-banner__image-wrapper { position: relative; width: 100%; overflow: hidden; background:#fff }
+
+        @media(max-width:767px){
+          a.custom-banner__button.custom-banner__button--content {
+    min-height: 45px;
+    font-size: 16px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 30px;
+    left: 45%;
+    max-width: fit-content;
+    transform: translateX(-40%);
+    width: 100%;
+    padding: 10px 20px 10px 30px;
+}
+          .bann_content {
+        position: unset;
+        transform: unset;
+}
+
+.ban_wrap_inner {
+    display: flex;
+    flex-direction: column-reverse;
+    position:relative
+}
+
+.custom-banner__content.custom-banner__content-- {
+    text-align: center;
+    padding: 30px 0;
+}
+
+h2.custom-banner__heading {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.custom-banner__description.desk {
+    display: none;
+}
+
+.custom-banner__description.mob p {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+          .cstm_banner_btm p {
+    font-size: 14px;
+    line-height: 1.3;
+}
+        .cstm_banner_top_inner {
+    display: grid;
+    justify-content: start;
+            grid-template-columns: 0.5fr 0.9fr 0.5fr;
+}
+
+.custom-banner__top-text.desk {
+    display: none;
+}
+
+.custom-banner__top-button.desk {
+    display: none;
+}
+
+.cstm_hamburger {
+    display: flex;
+}
+.cstm_hamburger span.cross_icon {
+    display: none;
+}
+.cstm_hamburger.active span.cross_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cstm_hamburger.active span.burger_icon {
+    display: none;
+}
+.cstm_hamburger span {
+    width: 20px;
+    height: 20px;
+ }
+
+.cstm_mobile_cont {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #F2F2F2;
+    z-index: 4;
+    display: block;
+    left: 0;
+       max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.custom-banner__top {
+    position: relative;
+}
+
+.custom-banner__top-text p {
+    font-size: 16px;
+}
+
+.custom-banner__top-button {
+    justify-content: center;
+    padding-bottom:25px
+}
+
+.custom-banner__top-text {
+    padding-top: 10px;
+}
+.custom-banner__top-button a {
+    font-size: 16px;
+    min-height: 45px;
+    padding-left: 50px;
+    margin-top: 5px;
+    padding-right: 25px;
+    gap: 30px;
+}
+        }
+
+      </style>
+
+{% liquid
+  assign overlay_position = section.settings.overlay_position
+%}
+
+<section
+  class="custom-banner-section"
+  id="CustomBanner-{{ section.id }}"
+>
+  <div class="page-width">
+    <div class="custom-banner__inner">
+      <div class="custom-banner__top">
+        <div class="cstm_banner_top_inner">
+          <div class="cstm_hamburger">
+            <span class="burger_icon">
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 1H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 11H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="cross_icon">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 13.9994L13.7279 1.27147" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 1L13.7279 13.7279" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+            </span>
+          </div>
+
+          <div class="custom-banner__logo">
+            {% if section.settings.logo != blank %}
+              <a href="{{ routes.root_url }}">
+                {{
+                  section.settings.logo
+                  | image_url: width: 400
+                  | image_tag: loading: 'lazy', widths: '100, 200, 300, 400', class: 'custom-banner__logo-image'
+                }}
+              </a>
+            {% endif %}
+          </div>
+          <div class="cstm_mobile_cont">
+            <div class="custom-banner__top-text">
+              {% if section.settings.top_text != blank %}
+                {{ section.settings.top_text }}
+              {% endif %}
+            </div>
+
+            <div class="custom-banner__top-button">
+              {% if section.settings.top_button_text != blank %}
+                <a
+                  href="{{ section.settings.top_button_link }}"
+                  class="custom-banner__button custom-banner__button--top"
+                >
+                  <span>{{ section.settings.top_button_text }}</span>
+
+                  {% if section.settings.top_button_icon != blank %}
+                    <span class="custom-banner__button-icon">
+                      {{ section.settings.top_button_icon }}
+                    </span>
+                  {% endif %}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="custom-banner__top-text desk">
+            {% if section.settings.top_text != blank %}
+              {{ section.settings.top_text }}
+            {% endif %}
+          </div>
+
+          <div class="custom-banner__top-button desk">
+            {% if section.settings.top_button_text != blank %}
+              <a
+                href="{{ section.settings.top_button_link }}"
+                class="custom-banner__button custom-banner__button--top"
+              >
+                <span>{{ section.settings.top_button_text }}</span>
+
+                {% if section.settings.top_button_icon != blank %}
+                  <span class="custom-banner__button-icon">
+                    {{ section.settings.top_button_icon }}
+                  </span>
+                {% endif %}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-banner__image-wrapper">
+        <div class="ban_wrap_inner">
+          {% if section.settings.image != blank %}
+            {{
+              section.settings.image
+              | image_url: width: 2400
+              | image_tag: loading: 'lazy', widths: '750, 1100, 1500, 2000, 2400', class: 'custom-banner__image'
+            }}
+          {% else %}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'custom-banner__image custom-banner__image--placeholder' }}
+          {% endif %}
+          <div class="bann_content">
+            <div class="custom-banner__content custom-banner__content--{{ overlay_position }}">
+              {% if section.settings.heading != blank %}
+                <h2 class="custom-banner__heading">
+                  {{ section.settings.heading }}
+                </h2>
+              {% endif %}
+
+              {% if section.settings.description != blank %}
+                <div class="custom-banner__description desk">
+                  {{ section.settings.description }}
+                </div>
+                 <div class="custom-banner__description mob">
+                  {{ section.settings.description | truncatewords:7 }}
+                </div>
+              {% endif %}
+
+              {% if section.settings.button_text != blank %}
+                <a
+                  href="{{ section.settings.button_link }}"
+                  class="custom-banner__button custom-banner__button--content"
+                >
+                  <span>{{ section.settings.button_text }}</span>
+
+                  {% if section.settings.button_icon != blank %}
+                    <span class="custom-banner__button-icon">
+                      {{ section.settings.button_icon }}
+                    </span>
+                  {% endif %}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if section.settings.btm != blank %}
+      <div class="cstm_banner_btm">
+<p>{{ section.settings.btm }}</p>
+      </div>
+    {% endif %}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Custom Banner - Ecom",
+  "tag": "section",
+  "class": "custom-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Top Row"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "richtext",
+      "id": "top_text",
+      "label": "Center Text",
+      "default": "<p>Center text goes here</p>"
+    },
+    {
+      "type": "text",
+      "id": "top_button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "top_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "html",
+      "id": "top_button_icon",
+      "label": "Button SVG / Icon",
+      "info": "Paste your SVG code here."
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "header",
+      "content": "Overlay Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Your description goes here.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Explore"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "html",
+      "id": "button_icon",
+      "label": "Button SVG / Icon",
+      "info": "Paste your SVG code here."
+    },
+    {
+    "type":"text",
+    "label":"Bottom Text",
+    "id": "btm"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner - Ecom"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+document.querySelector('.cstm_hamburger').addEventListener('click', function () {
+    this.classList.toggle('active');
+
+    const menu = document.querySelector('.cstm_mobile_cont');
+
+    if (menu.style.maxHeight) {
+        menu.style.maxHeight = null;
+    } else {
+        menu.style.maxHeight = menu.scrollHeight + 'px';
+    }
+});
+</script>
