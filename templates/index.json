@@ -1,75 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "custom_banner_ecom_NrM49k": {
+      "type": "custom-banner-Ecom",
+      "name": "Custom Banner - Ecom",
+      "settings": {
+        "top_text": "<p>Center text goes here</p>",
+        "top_button_text": "Shop Now",
+        "top_button_link": "",
+        "top_button_icon": "",
+        "heading": "Your heading",
+        "description": "<p>Your description goes here.</p>",
+        "button_text": "Explore",
+        "button_link": "",
+        "button_icon": "",
+        "btm": ""
+      }
+    },
+    "custom_hotspot_ecom_77Dydq": {
+      "type": "custom-hotspot-Ecom",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "product_RK8Hme": {
+          "type": "product",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "product": "",
+            "custom_svg": "",
+            "hotspot_top": 50,
+            "hotspot_left": 50
           }
         },
-        "button": {
-          "type": "buttons",
+        "product_FttixV": {
+          "type": "product",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "product": "",
+            "custom_svg": "",
+            "hotspot_top": 50,
+            "hotspot_left": 50
+          }
+        },
+        "product_NwXdeE": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "custom_svg": "",
+            "hotspot_top": 50,
+            "hotspot_left": 50
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "product_RK8Hme",
+        "product_FttixV",
+        "product_NwXdeE"
       ],
+      "name": "Product hotspot grid",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "heading": "Shop the look",
+        "top": 50,
+        "btm": 50
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "custom_banner_ecom_NrM49k",
+    "custom_hotspot_ecom_77Dydq"
   ]
 }
