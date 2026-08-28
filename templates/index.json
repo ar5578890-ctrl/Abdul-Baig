@@ -1,7 +1,7 @@
 {
   "sections": {
     "custom_banner_4yqgHp": {
-      "type": "custom-banner",
+      "type": "custom-banner-Ecom",
       "name": "Custom Banner - Ecom",
       "settings": {
         "logo": "shopify://shop_images/Group_1000007777.svg",
@@ -18,7 +18,7 @@
       }
     },
     "custom_hotspot_yVdkRh": {
-      "type": "custom-hotspot",
+      "type": "custom-hotspot-Ecom",
       "blocks": {
         "product_Ck4Krf": {
           "type": "product",
