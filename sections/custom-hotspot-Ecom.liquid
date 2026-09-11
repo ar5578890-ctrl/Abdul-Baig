@@ -1092,8 +1092,6 @@ gap:5px;
       }
     }
 
-    // Adds the current variant to the cart, then refreshes and opens
-    // Dawn's native cart drawer with the updated contents.
     function addToCart(button) {
       const variant = activeProduct.currentVariant;
 
@@ -1111,19 +1109,6 @@ gap:5px;
 
       button.querySelector('span').textContent = 'ADDING...';
 
-      const cartDrawer = document.querySelector('cart-drawer');
-
-      // Ask Shopify to render the cart-drawer (and cart-icon-bubble) section
-      // HTML in the same response, so Dawn's drawer has fresh markup to show.
-      // Dawn's own cart-drawer element knows which sections it needs via
-      // getSectionsToRender(); fall back to the standard IDs if unavailable.
-      const sectionsToRender =
-        cartDrawer && typeof cartDrawer.getSectionsToRender === 'function'
-          ? cartDrawer.getSectionsToRender().map(function (section) {
-              return section.id;
-            })
-          : ['cart-drawer', 'cart-icon-bubble'];
-
       fetch(window.Shopify.routes.root + 'cart/add.js', {
         method: 'POST',
         headers: {
@@ -1137,8 +1122,6 @@ gap:5px;
               quantity: 1,
             },
           ],
-          sections: sectionsToRender,
-          sections_url: window.location.pathname,
         }),
       })
         .then(function (response) {
@@ -1148,7 +1131,7 @@ gap:5px;
 
           return response.json();
         })
-        .then(function (response) {
+        .then(function () {
           button.querySelector('span').textContent = 'ADDED';
 
           document.dispatchEvent(
@@ -1157,13 +1140,12 @@ gap:5px;
             })
           );
 
-          // renderContents() swaps in the new section HTML (from
-          // response.sections) and then opens the drawer itself once
-          // the DOM is updated — no separate .open() call needed.
-          if (cartDrawer && typeof cartDrawer.renderContents === 'function') {
-            cartDrawer.renderContents(response);
-          } else if (cartDrawer && typeof cartDrawer.open === 'function') {
-            cartDrawer.open();
+          const cartDrawer = document.querySelector('cart-drawer');
+
+          if (cartDrawer && typeof cartDrawer.open === 'function') {
+            setTimeout(function () {
+              cartDrawer.open();
+            }, 150);
           }
 
           setTimeout(function () {
